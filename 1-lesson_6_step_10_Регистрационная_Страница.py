@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 
 try: 
-    Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
+    Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests/chromedriver_win32/chromedriver.exe')
     browser = webdriver.Chrome(service=Snew)
     browser.get("http://suninjuly.github.io/registration2.html")
 

@@ -2,13 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.keys import Keys
 import unittest
 
 class TestAbs(unittest.TestCase):
 #Первый тест
     def test_abs1(self):
-        Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
+        Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests/chromedriver_win32/chromedriver.exe')
         browser = webdriver.Chrome(service=Snew)
         browser.get("http://suninjuly.github.io/registration1.html")
 
@@ -27,7 +26,7 @@ class TestAbs(unittest.TestCase):
 
 #Второй тест
     def test_abs2(self):
-        Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
+        Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests/chromedriver_win32/chromedriver.exe')
         browser = webdriver.Chrome(service=Snew)
         browser.get("http://suninjuly.github.io/registration2.html")
 
@@ -42,6 +41,7 @@ class TestAbs(unittest.TestCase):
         welcome_text_elt_2 = browser.find_element(By.TAG_NAME, "h1")
         welcome_text_2 = welcome_text_elt_2.text 
     #Ассерт текста
-        self.assertEqual(welcome_text_2, "Congratulations! You have successfully registered!", "Несовпадение ожидаемого результата с результатом на практике!")
+        self.assertEqual(welcome_text_2, "Congratulations! You have successfully registered!", "NESOVPADENIJE REZULTATA NA PRKTIKE!")
+
 if __name__ == "__main__":
     unittest.main()
