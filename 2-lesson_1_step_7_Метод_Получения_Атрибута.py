@@ -5,12 +5,12 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import math
 
+link = "http://suninjuly.github.io/get_attribute.html"
 def calc(x):
     return str(math.log(abs(12*math.sin(int(x)))))
 
-Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-browser = webdriver.Chrome(service=Snew)
-browser.get("http://suninjuly.github.io/get_attribute.html")
+browser = webdriver.Chrome()
+browser.get(link)
 
 treasure = browser.find_element(By.CSS_SELECTOR, "#treasure")
 treasure_valuex = treasure.get_attribute("valuex")

@@ -4,10 +4,10 @@ import time
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 
+link = "http://suninjuly.github.io/registration2.html"
 try: 
-    Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests/chromedriver_win32/chromedriver.exe')
-    browser = webdriver.Chrome(service=Snew)
-    browser.get("http://suninjuly.github.io/registration2.html")
+    browser = webdriver.Chrome()
+    browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
     inputFN = browser.find_element(By.CSS_SELECTOR, "body > div > form > div.first_block > div.form-group.first_class > input")

@@ -7,15 +7,15 @@ import time
 import math
 import re
 
+link = "http://suninjuly.github.io/explicit_wait2.html"
 try:
         #Формула после покупки
     def calc(x):
         return math.log(abs(12*math.sin(int(x))))
 
         #Открырие браузера
-    Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-    browser = webdriver.Chrome(service=Snew)
-    browser.get("http://suninjuly.github.io/explicit_wait2.html")
+    browser = webdriver.Chrome()
+    browser.get(link)
 
         #Говорим Selenium проверять значение цены 15 секунд, пока кнопка не станет кликабельной
     Lake_house = WebDriverWait(browser, 15).until(

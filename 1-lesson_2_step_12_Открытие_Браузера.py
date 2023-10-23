@@ -1,16 +1,16 @@
 import time
-
+import re
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
+link_1 = "https://SunInJuly.github.io/execute_script.html"
+link_2 = "https://suninjuly.github.io/text_input_task.html"
 # Открытие Хрома с помощью драйвера
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
-Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-driver = webdriver.Chrome(service=Snew)
+driver = webdriver.Chrome()
+driver.get(link_1)
 #Тело теста
-driver.get("https://suninjuly.github.io/text_input_task.html")
+driver.get(link_2)
 time.sleep(5)
 textarea = driver.find_element(By.CSS_SELECTOR, ".textarea")
 textarea.send_keys("get()")

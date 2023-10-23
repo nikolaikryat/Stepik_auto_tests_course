@@ -11,9 +11,7 @@ link = "http://suninjuly.github.io/simple_form_find_task.html"
 
 try:
     #Открытие Хрома с помощью драйвера
-    Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-    driver = webdriver.Chrome(service=Snew)
-    driver.maximize_window()
+    driver = webdriver.Chrome()
     driver.get(link)
     #Манимуляции с полями
     input1 = driver.find_element(By.TAG_NAME, "input")

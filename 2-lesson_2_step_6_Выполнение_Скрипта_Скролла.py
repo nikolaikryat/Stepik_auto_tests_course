@@ -6,13 +6,13 @@ from selenium.webdriver.common.keys import Keys
 import math
 import re
 
+link = "https://SunInJuly.github.io/execute_script.html"
     #Формула
 def calc(x):
     return math.log(abs(12*math.sin(int(x))))
     #Открытие браузера
-Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-browser = webdriver.Chrome(service=Snew)
-browser.get("https://SunInJuly.github.io/execute_script.html")
+browser = webdriver.Chrome()
+browser.get(link)
     #Определение икса и внесение его в поле ввода
 x_element = browser.find_element(By.CSS_SELECTOR, "#input_value")
 x = x_element.text

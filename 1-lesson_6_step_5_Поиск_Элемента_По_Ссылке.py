@@ -5,9 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-browser = webdriver.Chrome(service=Snew)
-browser.maximize_window()
+browser = webdriver.Chrome()
 browser.get("http://suninjuly.github.io/find_link_text")
     #Если хотим найти элемент по полному соответствию текста
 link = browser.find_element(By.LINK_TEXT, str(math.ceil(math.pow(math.pi, math.e)*10000)))

@@ -5,12 +5,12 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import math
 
+link = "https://suninjuly.github.io/math.html"
 def calc(x):
     return str(math.log(abs(12*math.sin(int(x)))))
 
-Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-browser = webdriver.Chrome(service=Snew)
-browser.get("https://suninjuly.github.io/math.html")
+browser = webdriver.Chrome()
+browser.get(link)
 
 x_element = browser.find_element(By.CSS_SELECTOR, "#input_value")
 x = x_element.text

@@ -5,10 +5,11 @@ from selenium.webdriver.common.by import By
 import time
 import os
 
+link = "http://suninjuly.github.io/file_input.html"
     #Открытие браузера
 Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
 browser = webdriver.Chrome(service=Snew)
-browser.get("http://suninjuly.github.io/file_input.html")
+browser.get(link)
 
 input1 = browser.find_element(By.NAME, "firstname")
 input1.send_keys("Ivan")

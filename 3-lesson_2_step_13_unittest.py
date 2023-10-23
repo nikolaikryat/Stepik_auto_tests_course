@@ -4,12 +4,12 @@ import time
 from selenium.webdriver.chrome.service import Service
 import unittest
 
+link = "http://suninjuly.github.io/registration1.html"
 class TestAbs(unittest.TestCase):
 #Первый тест
     def test_abs1(self):
-        Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests/chromedriver_win32/chromedriver.exe')
-        browser = webdriver.Chrome(service=Snew)
-        browser.get("http://suninjuly.github.io/registration1.html")
+        browser = webdriver.Chrome()
+        browser.get(link)
 
     #Код, который заполняет обязательные поля, отправляет заполненную форму
         browser.find_element(By.CSS_SELECTOR, "body > div > form > div.first_block > div.form-group.first_class > input").send_keys("Ivan")

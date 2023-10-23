@@ -7,11 +7,11 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
+link = "http://suninjuly.github.io/huge_form.html"
 try:
-    Snew = Service('C:/Users/nkryat/Desktop/Niko/mycode/autotests2023/chromedriver_win32/chromedriver.exe')
-    browser = webdriver.Chrome(service=Snew)
+    browser = webdriver.Chrome()
     browser.maximize_window()
-    browser.get("http://suninjuly.github.io/huge_form.html")
+    browser.get(link)
 
     elements = browser.find_elements(By.TAG_NAME, "input")
     for element in elements:
